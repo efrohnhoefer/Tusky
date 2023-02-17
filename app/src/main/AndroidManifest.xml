@@ -21,6 +21,10 @@
         android:localeConfig="@xml/locales_config">
 
         <activity
+            android:name=".gallery.GalleryActivity"
+            android:exported="false"
+            android:theme="@style/GalleryActivity"/>
+        <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme"
             android:exported="true">

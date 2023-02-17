@@ -54,6 +54,7 @@ import com.keylesspalace.tusky.db.AccountManager
 import com.keylesspalace.tusky.di.Injectable
 import com.keylesspalace.tusky.entity.Attachment
 import com.keylesspalace.tusky.entity.Status
+import com.keylesspalace.tusky.gallery.GalleryActivity
 import com.keylesspalace.tusky.interfaces.AccountSelectionListener
 import com.keylesspalace.tusky.network.MastodonApi
 import com.keylesspalace.tusky.usecase.TimelineCases
@@ -333,7 +334,7 @@ abstract class SFragment : Fragment(), Injectable {
         val (attachment) = attachments[urlIndex]
         when (attachment.type) {
             Attachment.Type.GIFV, Attachment.Type.VIDEO, Attachment.Type.IMAGE, Attachment.Type.AUDIO -> {
-                val intent = newIntent(context, attachments, urlIndex)
+                val intent = GalleryActivity.newIntent(requireContext(), attachments, urlIndex)
                 if (view != null) {
                     val url = attachment.url
                     view.transitionName = url

@@ -146,6 +146,9 @@ dependencies {
 
     implementation libs.conscrypt.android
 
+    implementation libs.exoplayer.core
+    implementation libs.exoplayer.ui
+
     implementation libs.bundles.glide
     kapt libs.glide.compiler
 

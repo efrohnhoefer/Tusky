@@ -34,6 +34,7 @@ import com.keylesspalace.tusky.components.timeline.TimelineFragment
 import com.keylesspalace.tusky.components.viewthread.ViewThreadFragment
 import com.keylesspalace.tusky.components.viewthread.edits.ViewEditsFragment
 import com.keylesspalace.tusky.fragment.NotificationsFragment
+import com.keylesspalace.tusky.gallery.ImageFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -99,4 +100,7 @@ abstract class FragmentBuildersModule {
 
     @ContributesAndroidInjector
     abstract fun listsForAccountFragment(): ListsForAccountFragment
+
+    @ContributesAndroidInjector
+    abstract fun imageFragment(): ImageFragment
 }

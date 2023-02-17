@@ -20,6 +20,7 @@ import com.keylesspalace.tusky.components.timeline.viewmodel.CachedTimelineViewM
 import com.keylesspalace.tusky.components.timeline.viewmodel.NetworkTimelineViewModel
 import com.keylesspalace.tusky.components.viewthread.ViewThreadViewModel
 import com.keylesspalace.tusky.components.viewthread.edits.ViewEditsViewModel
+import com.keylesspalace.tusky.gallery.GalleryViewModel
 import com.keylesspalace.tusky.viewmodel.AccountsInListViewModel
 import com.keylesspalace.tusky.viewmodel.EditProfileViewModel
 import com.keylesspalace.tusky.viewmodel.ListsViewModel
@@ -143,6 +144,11 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(ListsForAccountViewModel::class)
     internal abstract fun listsForAccountViewModel(viewModel: ListsForAccountViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(GalleryViewModel::class)
+    internal abstract fun galleryViewModel(viewModel: GalleryViewModel): ViewModel
 
     // Add more ViewModels here
 }
